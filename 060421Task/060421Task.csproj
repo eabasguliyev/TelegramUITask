@@ -37,6 +37,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -93,6 +94,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\telegram_app_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\menu_vertical_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\menu_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\menu_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\search_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\tgChat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\dog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\cat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\hamster.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\cockatiel.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

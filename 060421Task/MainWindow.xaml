@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_060421Task"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800"
+        WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -13,28 +14,44 @@
         </Grid.RowDefinitions>
 
         <Grid Grid.Row="0" 
-              Background="#008DD5">
+              Background="#5682a3">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="3*"/>
                 <ColumnDefinition Width="6*"/>
             </Grid.ColumnDefinitions>
-            <DockPanel Grid.Column="0"
-                       Background="Transparent">
-                <Button DockPanel.Dock="Left" 
-                        Width="50"
-                        Background="Transparent"/>
-                <Label DockPanel.Dock="Right"
-                       Background="Transparent"
-                       Foreground="White"
-                       FontSize="25"
-                       Content="Telegram"
-                       VerticalAlignment="Center"/>
-            </DockPanel>
+            <Button Grid.Column="0"
+                    Background="Transparent"
+                    HorizontalContentAlignment="Left"
+                    BorderThickness="0"
+                    Cursor="Hand">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="8*"/>
+                    </Grid.ColumnDefinitions>
+                    <Rectangle Grid.Column="0"
+                               Width="30"
+                               Height="30"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Center">
+                        <Rectangle.Fill>
+                            <ImageBrush ImageSource="Resources/menu_24px.png"
+                                        Stretch="Fill"></ImageBrush>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                    <Label Grid.Column="1"
+                           Foreground="White"
+                           FontSize="25"
+                           Content="Telegram"
+                           Margin="10, 0, 0, 0"
+                           VerticalAlignment="Center"/>
+                </Grid>
+            </Button>
             <Grid Grid.Column="1"
                        Background="Transparent">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="5*"/>
-                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="10*"/>
+                    <ColumnDefinition Width="2*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <Label Grid.Column="0"
@@ -44,16 +61,36 @@
                        Content="Telegram: Service notifications"
                        VerticalAlignment="Center"/>
                 <Button Grid.Column="1"
-                        Background="Transparent"/>
+                        Background="Transparent"
+                        BorderThickness="0"
+                        Cursor="Hand">
+                    <Rectangle Height="35"
+                               Width="35">
+                        <Rectangle.Fill>
+                            <ImageBrush ImageSource="Resources/search_24px.png"></ImageBrush>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                </Button>
                 <Button Grid.Column="2"
-                        Background="Transparent"/>
+                        Background="Transparent"
+                        BorderThickness="0"
+                        Cursor="Hand">
+                    <Rectangle Height="40"
+                               Width="40">
+                        <Rectangle.Fill>
+                            <ImageBrush ImageSource="Resources/menu_vertical_24px.png"
+                                        Stretch="Fill"/>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                </Button>
             </Grid>
         </Grid>
 
         <Grid Grid.Row="1"
-              Background="#C2EBFF">
+              Background="#fff">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="1"/>
                 <ColumnDefinition Width="6*"/>
             </Grid.ColumnDefinitions>
 
@@ -63,14 +100,191 @@
                     <RowDefinition Height="10*"/>
                 </Grid.RowDefinitions>
 
-                <TextBox Grid.Row="0" 
+                <TextBox Grid.Row="0"
                          Text="Search"
-                         FontSize="25"
-                         VerticalContentAlignment="Center"/>
-                <UniformGrid Grid.Row="1" Rows="5"></UniformGrid>
+                         FontSize="20"
+                         VerticalContentAlignment="Center"
+                         Background="Transparent"
+                         BorderThickness="0"/>
+                <UniformGrid Grid.Row="1" Columns="1">
+                    <Button Background="Transparent"
+                            BorderThickness="0"
+                            HorizontalContentAlignment="Left">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="3*"/>
+                                <ColumnDefinition Width="9*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Ellipse Grid.Column="0" 
+                                     Width="50"
+                                     Height="50">
+                                <Ellipse.Fill>
+                                    <ImageBrush ImageSource="Resources/dog.png"
+                                                Stretch="Fill"/>
+                                </Ellipse.Fill>
+                            </Ellipse>
+                            <Grid Grid.Column="1">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="2*"/>
+                                    <RowDefinition Height="3*"/>
+                                </Grid.RowDefinitions>
+
+                                <Label Grid.Row="0"
+                                       Foreground="Black"
+                                       FontSize="15"
+                                       FontWeight="Bold"
+                                       Content="Dog"/>
+                                <Label Grid.Row="1"
+                                       Foreground="Black"
+                                       FontSize="15"
+                                       Content="Lorem ipsum dolor sit amet."/>
+                            </Grid>
+                        </Grid>
+                    </Button>
+                    <Button Background="Transparent"
+                            BorderThickness="0"
+                            HorizontalContentAlignment="Left">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="3*"/>
+                                <ColumnDefinition Width="9*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Ellipse Grid.Column="0" 
+                                     Width="50"
+                                     Height="50">
+                                <Ellipse.Fill>
+                                    <ImageBrush ImageSource="Resources/cat.png"
+                                                Stretch="Fill"/>
+                                </Ellipse.Fill>
+                            </Ellipse>
+                            <Grid Grid.Column="1">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="2*"/>
+                                    <RowDefinition Height="3*"/>
+                                </Grid.RowDefinitions>
+
+                                <Label Grid.Row="0"
+                                       Foreground="Black"
+                                       FontSize="15"
+                                       FontWeight="Bold"
+                                       Content="Cat"/>
+                                <Label Grid.Row="1"
+                                       Foreground="Black"
+                                       FontSize="15"
+                                       Content="Maecenas a rhoncus velit, et."/>
+                            </Grid>
+                        </Grid>
+                    </Button>
+                    <Button Background="Transparent"
+                            BorderThickness="0"
+                            HorizontalContentAlignment="Left">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="3*"/>
+                                <ColumnDefinition Width="9*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Ellipse Grid.Column="0" 
+                                     Width="50"
+                                     Height="50">
+                                <Ellipse.Fill>
+                                    <ImageBrush ImageSource="Resources/hamster.png"
+                                                Stretch="Fill"/>
+                                </Ellipse.Fill>
+                            </Ellipse>
+                            <Grid Grid.Column="1">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="2*"/>
+                                    <RowDefinition Height="3*"/>
+                                </Grid.RowDefinitions>
+
+                                <Label Grid.Row="0"
+                                       Foreground="Black"
+                                       FontSize="15"
+                                       FontWeight="Bold"
+                                       Content="Hamster"/>
+                                <Label Grid.Row="1"
+                                       Foreground="Black"
+                                       FontSize="15"
+                                       Content="Cras at tempor sem, ut."/>
+                            </Grid>
+                        </Grid>
+                    </Button>
+                    <Button Background="Transparent"
+                            BorderThickness="0"
+                            HorizontalContentAlignment="Left">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="3*"/>
+                                <ColumnDefinition Width="9*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Ellipse Grid.Column="0" 
+                                     Width="50"
+                                     Height="50">
+                                <Ellipse.Fill>
+                                    <ImageBrush ImageSource="Resources/cockatiel.png"
+                                                Stretch="Fill"/>
+                                </Ellipse.Fill>
+                            </Ellipse>
+                            <Grid Grid.Column="1">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="2*"/>
+                                    <RowDefinition Height="3*"/>
+                                </Grid.RowDefinitions>
+
+                                <Label Grid.Row="0"
+                                       Foreground="Black"
+                                       FontSize="15"
+                                       FontWeight="Bold"
+                                       Content="Cockatiel"/>
+                                <Label Grid.Row="1"
+                                       Foreground="Black"
+                                       FontSize="15"
+                                       Content="Sed varius lorem quis ligula."/>
+                            </Grid>
+                        </Grid>
+                    </Button>
+                </UniformGrid>
             </Grid>
-            
-            <Grid Grid.Column="1"></Grid>
+
+            <Border Grid.Column="1" Background="DarkGray"></Border>
+            <Grid Grid.Column="2"
+                  Background="Transparent">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="8*"/>
+                    <RowDefinition Height="2*"/>
+                </Grid.RowDefinitions>
+
+                <Border Grid.Row="0">
+                    <Image Source="Resources/tgChat.png"
+                           Stretch="Fill"></Image>
+                </Border>
+                <Grid Grid.Row="1" Margin="0,0.4,-0.2,0.2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="7*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox Grid.Column="0"
+                             Background="Transparent"
+                             BorderThickness="0"
+                             Text="Write a message..."
+                             FontSize="15"></TextBox>
+                    <Button Grid.Column="1"
+                            Background="Transparent"
+                            BorderThickness="0"
+                            Cursor="Hand">
+                        <Ellipse Width="70"
+                                 Height="65">
+                            <Ellipse.Fill>
+                                <ImageBrush ImageSource="Resources/telegram_app_48px.png" Stretch="Fill"/>
+                            </Ellipse.Fill>
+                        </Ellipse>
+                    </Button>
+                </Grid>
+            </Grid>
         </Grid>
     </Grid>
 </Window>
